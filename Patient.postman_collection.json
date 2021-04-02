@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "2ff0d81c-9463-49f4-bbe1-b2787270a342",
+		"name": "Patient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Patient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/patient",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Patient (Format A)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"date_of_test\":\"20210227134300\", \r\n    \"id_number\":\"IC000A2\", \r\n    \"patient_name\":\"Patient A4\", \r\n    \"gender\":\"F\", \r\n    \"date_of_birth\":\"19940231\", \r\n    \"lab_number\":\"QT196-21-124\", \r\n    \"clinic_code\":\"QT196\", \r\n    \"lab_studies\":[\r\n        {\r\n        \"code\":\"2085-9\", \r\n        \"name\":\"HDL Cholesterol\", \r\n        \"value\":\"cancel\", \r\n        \"unit\":\"mg/dL\", \r\n        \"ref_range\":\"> 59\", \r\n        \"finding\":\"A\", \r\n        \"result_state\":\"F\"\r\n        } \r\n    ]\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/patient",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Patient (Format B)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patient_data\": {\r\n        \"id_number\": \"IC000A3\",\r\n        \"first_name\": \"Patient\",\r\n        \"last_name\": \"A5\",\r\n        \"phone_mobile\": \"+6500000000\",\r\n        \"gender\": \"M\",\r\n        \"date_of_birth\": \"19940231\"\r\n    },\r\n    \"date_of_test\": \"20210227134300\",\r\n    \"lab_number\": \"QT196-21-124\",\r\n    \"clinic_code\": \"QT196\",\r\n    \"lab_studies\": [\r\n        {\r\n            \"code\": \"2085-9\",\r\n            \"name\": \"HDL Cholesterol\",\r\n            \"value\": \"cancel\",\r\n            \"unit\": \"mg/dL\",\r\n            \"ref_range\": \"> 59\",\r\n            \"finding\": \"A\",\r\n            \"result_state\": \"F\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/patient",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"patient"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
